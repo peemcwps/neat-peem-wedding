@@ -500,9 +500,10 @@ section{position:relative;padding:22px 10px}
 /* page 5: family-only panel */
 .fam{position:relative;margin:30px -2px 0;padding:22px 0 6px;border:1.5px dashed #E8A9B8;border-radius:26px;background:rgba(255,255,255,.5)}
 .fam .tl{margin-top:4px}
-.fam-tag{position:absolute;left:50%;top:-15px;transform:translateX(-50%);white-space:nowrap;background:var(--pink);color:#fff;
-  font-family:var(--thai);font-weight:400;font-size:14px;line-height:1;padding:8px 16px 8px;border-radius:999px;box-shadow:0 3px 8px rgba(213,116,137,.25)}
-.fam-tag span{font-family:var(--body);font-weight:700;font-size:12px;letter-spacing:.04em}
+.fam-tag{position:absolute;left:50%;top:-10px;transform:translateX(-50%);white-space:nowrap;margin:0;background:#FFF7F9;color:var(--pink-deep);
+  border:1px solid #F0C3CE;font-family:var(--thai);font-weight:300;font-size:11px;line-height:1;padding:4px 10px;border-radius:999px}
+.fam-tag span{font-family:var(--body);font-weight:600;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;opacity:.85;margin-left:2px}
+.h2-sched{font-size:46px}
 .tl2{margin-top:14px}
 /* page 6 */
 .loc-head{display:flex;align-items:center;justify-content:center;gap:8px}
@@ -553,7 +554,7 @@ section{position:relative;padding:22px 10px}
 .loc-head{display:flex;align-items:center;justify-content:center;gap:10px}
 .loc-head .h2{margin:0}
 .loc-head img{position:static;flex:none;height:auto;filter:drop-shadow(0 3px 4px rgba(94,107,140,.16))}
-.lh-bfly{width:44px;transform:rotate(-12deg) translateY(-6px)}
+.lh-bfly{width:26px;transform:rotate(-12deg) translateY(-10px)}
 .loc-head .chateau-h{width:50px;transform:translateY(-2px)}
 .inv-card{background:#FFFDF9;padding:10px;
   -webkit-mask:radial-gradient(circle 7px at 50% 50%,#000 6.5px,transparent 7px) 0 0/14px 14px round,linear-gradient(#000,#000) 7px 7px/calc(100% - 14px) calc(100% - 14px) no-repeat;
@@ -574,6 +575,7 @@ section{position:relative;padding:22px 10px}
   64%{transform:translateY(-7px) scale(1.08) rotate(-7deg)}70%{transform:translateY(-4px) scale(1.06) rotate(6deg)}
   76%{transform:translateY(-6px) scale(1.07) rotate(-4deg)}84%{transform:translateY(0) scale(.97) rotate(2deg)}90%{transform:translateY(-1px) scale(1.01) rotate(0)}}
 .foot-logo{filter:brightness(0) invert(1) drop-shadow(0 1px 3px rgba(190,90,115,.45))}
+.foot-art .foot-photo{box-shadow:none;filter:none}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{transition-duration:.01ms!important;transition-delay:0s!important;animation:none!important}}
 </style>
 </head>
@@ -720,8 +722,8 @@ section{position:relative;padding:22px 10px}
 
   <!-- 4. Schedule -->
   <section class="band b-sky" id="schedule">
-    <h2 class="h2">Wedding Day</h2>
-    <div class="fam"><p class="fam-tag">เฉพาะครอบครัวและญาติสนิท <span>· Family &amp; Relatives</span></p>
+    <h2 class="h2 h2-sched">Wedding Day Schedule</h2>
+    <div class="fam"><p class="fam-tag">เฉพาะครอบครัวและญาติ <span>· Family &amp; Relatives</span></p>
     <ol class="tl">
       <li class="L" style="--c:#F2C25B"><div class="txt"><time>7.30</time><p class="th-n">พิธีสงฆ์</p><p class="en">Religious Ceremony</p></div>
         <img class="tl-art wc-art" src="a/s2-monk.png" alt="">
@@ -1110,7 +1112,7 @@ section{position:relative;padding:22px 10px}
       else if(k==='ovalS'){ w=el.offsetWidth;h=el.offsetHeight; d=ellD(w/2,h/2,w/2+4,h/2+4); o={band:9,sc:6,sp:12} }
       else if(k==='arch'){ var im=el.querySelector('img'); w=im.offsetWidth;h=im.offsetHeight; d=archD(-5,-5,w+10,h+10,22); o={band:10,sc:6.5,sp:13,color:'#F2CBD5'} }
       else if(k==='footarch'){ var im=el.querySelector('.foot-photo'); var x=im.offsetLeft-im.offsetWidth/2,y=im.offsetTop; w=im.offsetWidth;h=im.offsetHeight;
-        d=archD(x-4,y-4,w+8,h+8,20); o={band:10,sc:6.5,sp:13}; w=el.offsetWidth; h=el.offsetHeight }
+        d=archD(x-4,y-4,w+8,h+8,20); o={band:10,sc:6.5,sp:13,shadow:false}; w=el.offsetWidth; h=el.offsetHeight }
       else if(k==='doily'){ w=el.offsetWidth;h=el.offsetHeight; d=ellD(w/2,h/2+8,124,98); o={band:22,sc:11,sp:18,color:'#fff',fill:true} }
       if(!w) return;
       var sv=document.createElementNS(NS,'svg'); sv.setAttribute('class','lace-svg'); sv.setAttribute('aria-hidden','true');
